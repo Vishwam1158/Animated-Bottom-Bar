@@ -11,37 +11,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.viz.animatedbottombar.ui.theme.AnimatedBottomBArTheme
+import com.viz.animatedbottombar.ui.theme.BottomNavigationTheme
+
+//import com.viz.animatedbottombar.ui.theme.AnimatedBottomBArTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            AnimatedBottomBArTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            BottomNavigationTheme {
+                HomeScreen(renderEffect = null)
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AnimatedBottomBArTheme {
-        Greeting("Android")
     }
 }
