@@ -1,12 +1,15 @@
 package com.viz.animatedbottombar.ui.theme
 
+
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 
+const val DEFAULT_PADDING = 44
+
 private val DarkColorPalette = darkColorScheme(
     primary = Purple200,
-//    primaryVariant = Purple700,
+    tertiary = Purple700,
     secondary = Pink,
     background = DarkPurple
 )
@@ -20,3 +23,4 @@ fun BottomNavigationTheme(content: @Composable () -> Unit) {
         content = content
     )
 }
+
