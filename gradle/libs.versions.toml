@@ -1,5 +1,9 @@
 [versions]
 agp = "8.4.0"
+animation = "1.6.8"
+animationVersion = "1.4.0"
+foundation = "1.6.8"
+foundationVersion = "1.4.0"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -8,9 +12,23 @@ espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.8.2"
 activityCompose = "1.9.0"
 composeBom = "2023.08.00"
+material = "1.6.8"
+materialVersion = "1.4.0"
+ui = "1.6.8"
+uiVersion = "1.4.0"
+material3Android = "1.2.1"
+foundationLayoutAndroid = "1.6.8"
 
 [libraries]
+androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "animation" }
+androidx-animation-v140 = { module = "androidx.compose.animation:animation", version.ref = "animationVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
+androidx-foundation-v140 = { module = "androidx.compose.foundation:foundation", version.ref = "foundationVersion" }
+androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "material" }
+androidx-material-v140 = { module = "androidx.compose.material:material", version.ref = "materialVersion" }
+androidx-ui-v140 = { module = "androidx.compose.ui:ui", version.ref = "uiVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -24,6 +42,9 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
+androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+androidx-foundation-layout-android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "foundationLayoutAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
