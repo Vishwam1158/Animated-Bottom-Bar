@@ -67,10 +67,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation(libs.androidx.material)
     implementation(libs.androidx.material.icons.extended)
-
-    implementation(libs.ui)  // Replace with your Compose version
-    implementation(libs.androidx.foundation)  // Replace with your Compose version
-    implementation(libs.androidx.animation)
 }
