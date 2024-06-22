@@ -9,8 +9,11 @@ import androidx.annotation.RequiresApi
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -21,7 +24,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asComposeRenderEffect
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 
@@ -90,39 +92,47 @@ fun HomeScreen(
     clickAnimationProgress: Float = 0f,
     toggleAnimation: () -> Unit = { }
     ) {
-    Box(
-        Modifier
-            .fillMaxSize()
-            .padding(bottom = 24.dp),
-        contentAlignment = Alignment.BottomCenter
+    Column(
+        modifier = Modifier
+            .fillMaxWidth(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+
+
     ) {
-        CustomBottomNavigation()
-        FabGroup(renderEffect = renderEffect, animationProgress = fabAnimationProgress)
-        FabGroup(renderEffect = null, animationProgress = fabAnimationProgress, toggleAnimation = toggleAnimation)
 
-        Circle(
-            color = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f),
-            animationProgress = 0.5f
-        )
 
-        FabGroup(renderEffect = renderEffect, animationProgress = fabAnimationProgress)
-        FabGroup(
-            renderEffect = null,
-            animationProgress = fabAnimationProgress,
-            toggleAnimation = toggleAnimation
-        )
-        Circle(
-            color = Color.White,
-            animationProgress = clickAnimationProgress
-        )
+        Box(
+            Modifier
+                .fillMaxSize()
+                .padding(bottom = 24.dp),
+            contentAlignment = Alignment.BottomCenter
+        ) {
+            CustomBottomNavigation()
+            FabGroup(renderEffect = renderEffect, animationProgress = fabAnimationProgress)
+            FabGroup(
+                renderEffect = null,
+                animationProgress = fabAnimationProgress,
+                toggleAnimation = toggleAnimation
+            )
+
+            Circle(
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f),
+                animationProgress = 0.5f
+            )
+
+            FabGroup(renderEffect = renderEffect, animationProgress = fabAnimationProgress)
+            FabGroup(
+                renderEffect = null,
+                animationProgress = fabAnimationProgress,
+                toggleAnimation = toggleAnimation
+            )
+            Circle(
+                color = Color.White,
+                animationProgress = clickAnimationProgress
+            )
+        }
     }
 }
 
 
-
-
-@Preview
-@Composable
-private fun HomeScreenPreview() {
-    HomeScreen(null)
-}
