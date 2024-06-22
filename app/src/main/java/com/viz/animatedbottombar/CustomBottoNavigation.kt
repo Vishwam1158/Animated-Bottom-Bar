@@ -110,7 +110,7 @@ fun FabGroup(
                     PaddingValues(
                         bottom = 72.dp* FastOutSlowInEasing.transform(0f, 0.8f, animationProgress),
                         end = 210.dp* FastOutSlowInEasing.transform(0f, 0.8f, animationProgress)
-                    )// * FastOutSlowInEasing.transform(0f, 0.8f, animationProgress)
+                    )
                 ),
             opacity = LinearEasing.transform(0.2f, 0.7f, animationProgress)
         )
@@ -120,7 +120,7 @@ fun FabGroup(
             modifier = Modifier.padding(
                 PaddingValues(
                     bottom = 88.dp* FastOutSlowInEasing.transform(0.2f, 0.9f, animationProgress),
-                ) // * FastOutSlowInEasing.transform(0.1f, 0.9f, animationProgress)
+                )
             ),
             opacity = LinearEasing.transform(0.3f, 0.8f, animationProgress)
         )
@@ -131,7 +131,7 @@ fun FabGroup(
                 PaddingValues(
                     bottom = 72.dp * FastOutSlowInEasing.transform(0.2f, 1.0f, animationProgress),
                     start = 210.dp* FastOutSlowInEasing.transform(0.2f, 1.0f, animationProgress)
-                ) // * FastOutSlowInEasing.transform(0.2f, 1.0f, animationProgress)
+                )
             ),
             opacity = LinearEasing.transform(0.4f, 0.9f, animationProgress)
         )
